@@ -9,9 +9,12 @@
     <label for="poinsonous">Poisonous</label>
   </div>
   <div>
-    <div class="col-xs-4" ng-repeat="mushroom in mushrooms | filter: searchText">
-      <h3> {{name}} </h3>
-      <p> {{description}} </p>
-    </div>
+    <div ng-repeat="mushroom in mushrooms">
+      <div class="clearfix" ng-if="$index % 3 == 0"></div>
+        <div class="col-xs-4">
+            <h3> {{mushroom.name}} </h3>
+            <p> {{mushroom.description}} </p>
+        </div>
+      </div>
   </div>
 </section>
