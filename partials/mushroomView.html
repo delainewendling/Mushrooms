@@ -1,0 +1,17 @@
+<section>
+  <div>
+    <input type="text" placeholder="Search for Mushrooms..." ng-model="searchText">
+  </div>
+  <div>
+    <input type="radio" value="edible" id="edible" name="mushroomType">
+    <label for="edible">Edible</label>
+    <input type="radio" value="poisonous" id="poisonous" name="mushroomType">
+    <label for="poinsonous">Poisonous</label>
+  </div>
+  <div>
+    <div class="col-xs-4" ng-repeat="mushroom in mushrooms | filter: searchText">
+      <h3> {{name}} </h3>
+      <p> {{description}} </p>
+    </div>
+  </div>
+</section>
